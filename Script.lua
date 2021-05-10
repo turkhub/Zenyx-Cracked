@@ -1,8 +1,12 @@
-getgenv().ZenyxKey = "key_Spencer#0147 is a gamer";
+getgenv().ZenyxKey = "key_Spencer#0003 is a gamer";
 
 replaceclosure(syn.request, newcclosure(function(self)
     return { StatusCode = 200, Body = "Unauthorized" }; -- Zenyx is kewl, am I right?
 end));
+
+replaceclosure(game.HttpGet, function(self, uri)
+    return "127.0.0.1"; -- Apparently I didn't notice this IP logger? LMAO
+end);
 
 return (function(e, ...)
     local I = "This file was obfuscated using PSU Obfuscator 4.0.A | https://www.psu.dev/ & discord.gg/psu"
